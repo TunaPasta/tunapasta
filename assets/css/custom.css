@@ -94,6 +94,22 @@ a:hover {
   font-size: 14px;
 }*/
 
+.footer {
+  position: absolute;
+  bottom: 5;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e1feff;
+  /*background-color: #6ED7FF;*/
+  /*margin: 5px;*/
+}
+
+.footer a:hover {
+
+  border-bottom: 2px solid white;
+  text-decoration: none;
+}
+
 @media screen and (max-width:770px){
   .main{
     width: 100%;
