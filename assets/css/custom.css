@@ -9,6 +9,12 @@
   font-family: 'Lato', sans-serif;
 }
 
+#navbar{
+  background-color: #7DDDFF;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
 .main{
   position: absolute;
   top: 50%;
