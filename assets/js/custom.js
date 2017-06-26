@@ -1,17 +1,17 @@
 $(document).ready(function(){
   var widget  = SC.Widget($('#cloudplayer').attr('id'));
-  var defaultPlayerOptions = {show_artwork: false, show_comments: false, auto_play: true, visual: false}
-  var newSoundUrl = 'http://api.soundcloud.com/tracks/13692671';
-  var sound = 'https://soundcloud.com/tunapastapodcast/coming-soon';
+  var defaultPlayerOptions = {show_artwork: false, show_comments: false, auto_play: true, visual: false};
+  var episodes = {
+    'mixtape': 'https://soundcloud.com/user-162103925/views-from-the-swamp',
+    'promo': 'https://soundcloud.com/tunapastapodcast/coming-soon',
+    'ep1': ''
+  };
 
   $('#click1').click(() => {
-  	console.log('yeesss');
-    widget.load(newSoundUrl, defaultPlayerOptions);
-    widget.play();
+    widget.load(episodes['mixtape'], defaultPlayerOptions);
   });
 
   $('#click2').click(() => {
-  	console.log('yeesss2');
-    widget.load(sound, defaultPlayerOptions);
+    widget.load(episodes['promo'], defaultPlayerOptions);
   });
 });
