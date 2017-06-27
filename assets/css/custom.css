@@ -11,18 +11,29 @@
 }
 
 body {
-
+  height: 100%;
 }
 
 #cog{
   position: fixed;
-  top: -150px;
-  left: -200px;
+  top: -290px;
+}
+
+#cog-right{
+  position: fixed;
+  top: -290px;
+}
+
+.left{
+  left: -410px;
+}
+
+.right {
+  right: -390px;
 }
 
 .circle {
-
-  width: 500px;
+  width: 680px;
 }
 
 #navbar{
