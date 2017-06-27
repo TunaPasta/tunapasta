@@ -1,17 +1,29 @@
 $(document).ready(function(){
    var bodyHeight = $(window).height();
+   var top = true;
+   var deg = 0;
    window.onscroll = function() {
-     console.log("Leftside");
+     if (window.scrollY < bodyHeight*.75) {
+       console.log("It worked here" + (window.scrollY-bodyHeight*.75));
+       $("#cog").css({
+        "margin-left": ""+window.scrollY-bodyHeight*.75 +"px",
+       });
+       $("#cog-right").css({
+        "margin-right": ""+ window.scrollY-bodyHeight*.75 +"px",
+       });
+       deg = 0;
+     }
+    //  console.log("Leftside");
       //Determine the amount to rotate by.
-      console.log(1+bodyHeight/980);
-      var deg = -window.scrollY/(1+bodyHeight/1000)*(360/bodyHeight);
-      if (window.scrollY < bodyHeight) {
-        console.log("HEY");
-        leftcog.src = "assets/images/leftcog.png";
-      }
-      if (window.scrollY > bodyHeight) {
-        console.log("HEY");
-        leftcog.src = "assets/images/SLCcogleft.png";
+      // console.log(1+bodyHeight/980);
+      if(window.scrollY >= bodyHeight*.75){
+        deg = -(window.scrollY-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
+        // if (window.scrollY < bodyHeight) {
+        //   leftcog.src = "assets/images/leftcog.png";
+        // }
+        // if (window.scrollY > bodyHeight) {
+        //   leftcog.src = "assets/images/SLCcogleft.png";
+        // }
       }
       $("#cog").css({
         "transform": "rotate("+deg+"deg)",
@@ -19,6 +31,7 @@ $(document).ready(function(){
       $("#cog-right").css({
         "transform": "rotate("+-deg+"deg)",
       });
+
 
    };
 });

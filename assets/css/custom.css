@@ -14,9 +14,14 @@ body {
   height: 100%;
 }
 
+.intro{
+  height: 77%;
+}
+
 #cog{
   position: fixed;
   top: -290px;
+
 }
 
 #cog-right{
