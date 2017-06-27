@@ -8,10 +8,12 @@ $(document).ready(function(){
   };
 
   $('#click1').click(() => {
-    widget.load(episodes['mixtape'], defaultPlayerOptions);
+    $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293371157&amp;auto_play=false&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
+    // widget.load(episodes['mixtape'], defaultPlayerOptions);
   });
 
   $('#click2').click(() => {
-    widget.load(episodes['promo'], defaultPlayerOptions);
+    $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false");
+    // widget.load(episodes['promo'], defaultPlayerOptions);
   });
 });
