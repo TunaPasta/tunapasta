@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <script src="assets/js/api.js"></script> <!-- Soundcloud Widget API -->
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/cog.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top nav-down nav-top">
@@ -81,13 +82,19 @@
       <button type="button" id='click1'>Play1</button>
       <button type="button" id='click2'>Play2</button> -->
     </div>
-    <div class="foot-player">
-      <iframe id='cloudplayer' class="cloudplayer bottom" width="1080px" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false"></iframe>
+    <div id="cog">
+      <img class="circle" src="assets/images/stick.png" alt="">
     </div>
 
+    <div class="foot-player">
+      <div class="mask">
+        <iframe id='cloudplayer' class="cloudplayer bottom" width="1080px" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false"></iframe>
+      </div>
+    </div>
+    <img class="takashi" src="assets/images/takashi.png" alt="">
+    <img class="nikhil" src="assets/images/nikhil.png" alt="">
     <!-- <p class="footer"><a href="https://goo.gl/forms/XESLQnBO1eN8WKtE2" target="_blank">get notified with each episode</a></p> -->
-    <!-- <img class="takashi" src="assets/images/takashi.png" alt=""> -->
-    <!-- <img class="nikhil" src="assets/images/nikhil.png" alt=""> -->
+
 
   </body>
 </html>
