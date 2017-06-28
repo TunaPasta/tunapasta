@@ -19,9 +19,20 @@ $(document).ready(function(){
     //  console.log("Leftside");
       //Determine the amount to rotate by.
       // console.log(1+bodyHeight/980);
-      if(window.scrollY >= (bodyHeight*.75*page)-210){
-        page += 1;
+
+      console.log("Page is " + page);
+      if(window.scrollY > (bodyHeight*.75)-210){
+        page = 1;
         $('#click1').show();
+        car.src = "assets/images/CaliCar.png";
+      }
+      if (window.scrollY > (2*bodyHeight*.75)-150) {
+        page = 2;
+        $('#click1').show();
+        car.src = "assets/images/ShareCar.png";
+        // $("#click1").css({
+        //   "background-color": "blue",
+        // });
       }
       if(window.scrollY >= bodyHeight*.75){
         deg = -(window.scrollY-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
