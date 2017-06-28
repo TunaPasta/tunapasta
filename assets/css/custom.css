@@ -16,7 +16,7 @@ body {
 
 .intro{
   height: 541px;
-  padding: 140px 100px;
+  padding: 110px 100px;
 }
 
 .intro-card {
@@ -117,11 +117,17 @@ body {
 }
 
 #navbar{
-  background-color: #5ADCFF;
+  background-color: #7DDDFF;
   font-family: 'Lato', sans-serif;
   color: white !important;
-  height: 80px !important;
+  height: 70px !important;
   padding: 14px 30px;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar{
+  border-color: #7DDDFF !important;
+  transition: 0.4s ease-in-out;
 }
 
 .nav-title{

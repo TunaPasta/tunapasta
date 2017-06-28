@@ -15,6 +15,9 @@ $(document).ready(function(){
        });
       $('#click1').hide();
        deg = 0;
+       $('#navbar').css({
+         "background-color": "#7DDFFF",
+       });
      }
     //  console.log("Leftside");
       //Determine the amount to rotate by.
@@ -25,6 +28,14 @@ $(document).ready(function(){
         page = 1;
         $('#click1').show();
         car.src = "assets/images/CaliCar.png";
+
+        $('#navbar').css({
+          "background-color": "#5ADCFF",
+        });
+        //
+        // $('.navbar').css({
+        //   "margin-top": "-100px",
+        // });
       }
       if (window.scrollY > (2*bodyHeight*.75)-150) {
         page = 2;
