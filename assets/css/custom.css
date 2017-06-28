@@ -15,17 +15,76 @@ body {
 }
 
 .intro{
-  height: 77%;
+  height: 541px;
+  padding: 140px 100px;
 }
+
+.intro-card {
+  position: relative;
+  height: 430px;
+  width: 700px;
+  background-color: #5ADCFF;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 36px 60px;
+  color: white;
+  border-radius: 10px;
+}
+
+.intro-card p {
+  font-size: 20px;
+  color: #E1FEFF;
+}
+
+.intro-card .header {
+  font-size: 30px;
+  color: white;
+}
+
+.intro-card i {
+  font-size: 16px !important;
+}
+
+.intro-card .scroll{
+  position: relative;
+  bottom: 170px;
+  font-size: 16px;
+
+}
+
+.cheers{
+  position: relative;
+
+  bottom: 140px;
+  text-align: right;
+}
+
+.please{
+  text-align: left;
+  bottom: 214px;
+  opacity: 0.8;
+}
+
+.tunacar {
+  width: 320px;
+  position: relative;
+  bottom: 36px;
+  margin-left: -20px;
+}
+
 
 #cog{
   position: fixed;
   top: -290px;
+  margin-left: -300px;
+  z-index: 4;
 }
 
 #cog-right{
   position: fixed;
   top: -290px;
+  margin-right: -300px;
+  z-index: 4;
 }
 
 .left{
