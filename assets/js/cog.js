@@ -1,19 +1,21 @@
 $(document).ready(function(){
-   var bodyHeight = $(window).height();
+   var div = $('#main');
+   var bodyHeight = div.height();
    var top = true;
    var deg = 0;
    var page = 1;
-  //  $('#click1').hide();
-   window.onscroll = function() {
-     if (window.scrollY < bodyHeight*.75) {
-       console.log("It worked here" + (window.scrollY-bodyHeight*.75));
+   $('#click1').hide();
+
+   div.scroll(function() {
+     if (div.scrollTop() < bodyHeight*.75) {
+       console.log("It worked here" + (div.scrollTop()-bodyHeight*.75));
        $("#cog").css({
-        "margin-left": ""+window.scrollY-bodyHeight*.75 +"px",
+        "margin-left": ""+div.scrollTop()-bodyHeight*.75 +"px",
        });
        $("#cog-right").css({
-        "margin-right": ""+ window.scrollY-bodyHeight*.75 +"px",
+        "margin-right": ""+ div.scrollTop()-bodyHeight*.75 +"px",
        });
-      // $('#click1').hide();
+      $('#click1').hide();
        deg = 0;
        $('#navbar').css({
          "background-color": "#7DDFFF",
@@ -24,7 +26,7 @@ $(document).ready(function(){
       // console.log(1+bodyHeight/980);
 
       console.log("Page is " + page);
-      if(window.scrollY > (bodyHeight*.75)-210){
+      if (div.scrollTop() > (bodyHeight*.75)-210){
         page = 1;
         $('#click1').show();
         car.src = "assets/images/CaliCar.png";
@@ -37,7 +39,7 @@ $(document).ready(function(){
         //   "margin-top": "-100px",
         // });
       }
-      if (window.scrollY > (2*bodyHeight*.75)-150) {
+      if (div.scrollTop() > (2*bodyHeight*.75)-150) {
         page = 2;
         $('#click1').show();
         car.src = "assets/images/ShareCar.png";
@@ -45,8 +47,8 @@ $(document).ready(function(){
         //   "background-color": "blue",
         // });
       }
-      if(window.scrollY >= bodyHeight*.75){
-        deg = -(window.scrollY-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
+      if(div.scrollTop() >= bodyHeight*.75){
+        deg = -(div.scrollTop()-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
         // if (window.scrollY < bodyHeight) {
         //   leftcog.src = "assets/images/leftcog.png";
         // }
@@ -62,7 +64,7 @@ $(document).ready(function(){
       });
 
 
-   };
+   });
 });
 
 // $(document).ready(function(){
