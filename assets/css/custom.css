@@ -126,6 +126,94 @@ body {
   width: 550px;
   height: 250px;
   background-color: white;
+  border-radius: 10px;
+  color: #5ADCFF;
+  padding: 0;
+}
+
+
+
+.modal h1 {
+  color: white;
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.modal p {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.modal a {
+  color: #5ADCFF !important;
+}
+
+.modal .body {
+  padding: 0px 60px;
+}
+
+.modal .top {
+  background-color: #5ADCFF;
+}
+
+.modal .half {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.modal .right {
+  position: relative;
+  left: 50%;
+  top: -136px;
+}
+
+.modal .fa {
+  color: #7DDDFF;
+  margin: 0 8px;
+}
+
+.modal .close {
+  color: white !important;
+  margin: 10px 14px;
+  opacity: 0.8;
+}
+
+.modal .description {
+  font-size: 14px;
+  color: #7DDDFF;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.modal .user {
+  margin-top: -40px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.modal .half .description {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.modal .half img {
+  width: 40%;
+}
+
+.modal .foot {
+  margin-top: -140px;
+}
+
+#subscribemodal {
+  height: 300px;
+}
+
+#subscribemodal .right {
+  top: -150px;
 }
 
 #navbar{

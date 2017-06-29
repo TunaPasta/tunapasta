@@ -43,6 +43,8 @@ $(document).ready(function(){
 
 function showShareScreen(){
   console.log("SHARE!");
+  $("#sharemodal").trigger('openModal');
+  // window.open('#sharemodal');
 }
 
 jQuery(function($) {
@@ -80,7 +82,7 @@ $(function() {
 $(function() {
   $('.modal').easyModal({
     top: 200,
-    overlayOpacity: .2
+    overlayOpacity: .3
   });
 
   $('.modal-open').click(function(e) {
