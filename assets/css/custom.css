@@ -232,6 +232,7 @@ body {
   width: 240px;
   pointer-events: none;
   z-index: 4;
+  margin-bottom: -200px;
 }
 
 .nikhil {
@@ -240,6 +241,7 @@ body {
   right: 0;
   height: 220px;
   z-index: 4;
+  margin-bottom: -220px;
 }
 
 a{

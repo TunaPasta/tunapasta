@@ -11,9 +11,11 @@ $(document).ready(function(){
   var playingTrack = 0;
 
   $('.play').click(() => {
-    // console.log(widget.getCurrentSoundIndex());
-    console.log($(".play").attr('id'));
     var selectedTrack = $(".play").attr('id');
+    if(selectedTrack == -1){
+      showShareScreen();
+      return;
+    }
     if(loadedTrack != selectedTrack){
       $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293371157&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
       loadedTrack = selectedTrack;
@@ -38,6 +40,10 @@ $(document).ready(function(){
     });
   });
 });
+
+function showShareScreen(){
+  console.log("SHARE!");
+}
 
 jQuery(function($) {
   var options = {

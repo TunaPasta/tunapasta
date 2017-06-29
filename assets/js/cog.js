@@ -15,6 +15,18 @@ $(document).ready(function(){
        $("#cog-right").css({
         "margin-right": ""+ div.scrollTop()-bodyHeight*.75 +"px",
        });
+       deg = -(div.scrollTop()-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
+
+
+       $(".takashi").css({
+         "margin-bottom": ""+ div.scrollTop()-bodyHeight*.75 +"px",
+         "transform": "rotate("+(deg)+"deg)",
+       });
+       $(".nikhil").css({
+         "margin-bottom": ""+ div.scrollTop()-bodyHeight*.75 +"px",
+         "transform": "rotate(-"+(deg-10)+"deg)",
+       });
+
       $('.play').hide();
        deg = 0;
        $('#navbar').css({
@@ -28,19 +40,18 @@ $(document).ready(function(){
       console.log("Page is " + page);
       if (div.scrollTop() > (bodyHeight*.75)-210){
         page = 1;
+        setPlayID(page);
         $('.play').show();
+        $('.icon').show();
         car.src = "assets/images/CaliCar.png";
-
         $('#navbar').css({
           "background-color": "#5ADCFF",
         });
-        //
-        // $('.navbar').css({
-        //   "margin-top": "-100px",
-        // });
       }
       if (div.scrollTop() > (2*bodyHeight*.75)-150) {
-        page = 2;
+        page = -1;
+        setPlayID(page);
+        $('.icon').hide();
         $('.play').show();
         car.src = "assets/images/ShareCar.png";
         // $(".play").css({
@@ -66,6 +77,14 @@ $(document).ready(function(){
 
    });
 });
+
+function togglePlayShare(){
+
+}
+
+function setPlayID(id){
+  $('.play').attr('id', id);
+}
 
 // $(document).ready(function(){
 //    var bodyHeight = $(window).height();
