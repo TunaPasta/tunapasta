@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <script src="assets/js/api.js"></script> <!-- Soundcloud Widget API -->
     <script src="assets/js/panelsnap.js"></script>
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/cog.js"></script>
   </head>
@@ -57,21 +58,43 @@
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
-          <li style="margin-right: 15px;"><a href="contact.html">Contact</a></li>
+          <li style="margin-right: 15px;"><a class="modal-open" href="#contactmodal">Contact</a></li>
         </ul>
       </div>
     </nav><!--./navbar-->
     <div id='parent' class='container'>
+
+      <div class="modal" id="contactmodal">
+    		<h1>Contact</h1>
+        <p>For press inquiries, please email hello@tunapastapodcast.org</p>
+        <p>For all other inquiries, please email hello@tunapastapodcast.org</p>
+    	</div>
+
+      <div class="modal" id="subscribemodal">
+    		<h1>Subscribe</h1>
+        <p>Apple Podcasts</p>
+        <p>Stitcher</p>
+        <p>SoundCloud</p>
+    	</div>
+
+      <div class="modal" id="sharemodal">
+    		<h1>Share</h1>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Email</p>
+        <p>URL Link</p>
+    	</div>
+
       <div class="main" id="main">
-        <section>
+        <section id="#">
           <div class="intro">
             <div class="intro-card">
               <p><span class="header">Hi there! My friend and I traveled the country, and along the way,</span> we sparked conversations with people we would normally pass by.
                 From this, we produced a podcast, which you can access just below. Hope you enjoy.</p>
                 <img class="tunacar" src="assets/images/NandT.png" alt="">
                 <p class="cheers">Cheers, <br>Takashi & Nikhil</p>
-                <p class="cheers please"><a href="#"><i class="fa fa-share" aria-hidden="true"></i>
-   Share</a> <br><a href="#"><i class="fa fa-rss" aria-hidden="true"></i>
+                <p class="cheers please"><a class="modal-open" href="#sharemodal"><i class="fa fa-share" aria-hidden="true"></i>
+   Share</a> <br><a class="modal-open" href="#subscribemodal"><i class="fa fa-rss" aria-hidden="true"></i>
    Subscribe</a></p>
                 <p class="scroll">scroll down for more!<br><i class="fa fa-chevron-down" aria-hidden="true"></i>
   </p>
