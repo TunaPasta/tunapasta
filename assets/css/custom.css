@@ -112,8 +112,12 @@ body {
   cursor: pointer;
 }
 
-.car{
+.play .car{
   width: 100%;
+}
+
+.play .icon {
+  transform: translateY(-100%);
 }
 
 #navbar{

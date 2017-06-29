@@ -7,23 +7,35 @@ $(document).ready(function(){
     'ep1': ''
   };
   var load = false;
+  var loadedTrack = 0;
+  var playingTrack = 0;
 
-  $('#click1').click(() => {
+  $('.play').click(() => {
     // console.log(widget.getCurrentSoundIndex());
-    if($("#click1").val() == ""){
-      console.log("INCREDIBLE!");
+    console.log($(".play").attr('id'));
+    var selectedTrack = $(".play").attr('id');
+    if(loadedTrack != selectedTrack){
+      $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293371157&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
+      loadedTrack = selectedTrack;
+
+    } else {
+      widget.toggle();
     }
-    console.log("Hey there" + $("#click1").val());
-    if(load == false){
-      $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293371157&amp;auto_play=false&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
+    if(playingTrack == selectedTrack){
+      playingTrack = 0;
+    } else {
+      playingTrack = selectedTrack;
     }
-    load = true;
-    // widget.load(episodes['mixtape'], defaultPlayerOptions);
+
+    if(playingTrack != selectedTrack){
+      caricon.src = "assets/images/play.png"
+    } else {
+      caricon.src = "assets/images/pause.png"
+    }
+
     $('.foot-player').css({
       "bottom": "0",
     });
-    car.src = "assets/images/CaliCar-pause.png";
-    widget.toggle();
   });
 });
 

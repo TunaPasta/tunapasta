@@ -4,7 +4,7 @@ $(document).ready(function(){
    var top = true;
    var deg = 0;
    var page = 1;
-   $('#click1').hide();
+   $('.play').hide();
 
    div.scroll(function() {
      if (div.scrollTop() < bodyHeight*.75) {
@@ -15,7 +15,7 @@ $(document).ready(function(){
        $("#cog-right").css({
         "margin-right": ""+ div.scrollTop()-bodyHeight*.75 +"px",
        });
-      $('#click1').hide();
+      $('.play').hide();
        deg = 0;
        $('#navbar').css({
          "background-color": "#7DDFFF",
@@ -28,7 +28,7 @@ $(document).ready(function(){
       console.log("Page is " + page);
       if (div.scrollTop() > (bodyHeight*.75)-210){
         page = 1;
-        $('#click1').show();
+        $('.play').show();
         car.src = "assets/images/CaliCar.png";
 
         $('#navbar').css({
@@ -41,9 +41,9 @@ $(document).ready(function(){
       }
       if (div.scrollTop() > (2*bodyHeight*.75)-150) {
         page = 2;
-        $('#click1').show();
+        $('.play').show();
         car.src = "assets/images/ShareCar.png";
-        // $("#click1").css({
+        // $(".play").css({
         //   "background-color": "blue",
         // });
       }
