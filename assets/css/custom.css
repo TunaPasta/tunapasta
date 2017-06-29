@@ -138,6 +138,7 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 24px;
+  padding-left: 52px;
 }
 
 .modal p {
@@ -170,7 +171,7 @@ body {
 }
 
 .modal .fa {
-  color: #7DDDFF;
+  color: #BCBCBC;
   margin: 0 8px;
 }
 
@@ -182,11 +183,10 @@ body {
 
 .modal .description {
   font-size: 14px;
-  color: #7DDDFF;
+  color: #BCBCBC;
   margin-top: 20px;
   margin-bottom: 6px;
   text-align: center;
-  opacity: 0.8;
 }
 
 .modal .user {
@@ -206,6 +206,21 @@ body {
 
 .modal .foot {
   margin-top: -140px;
+}
+
+#contactmodal p {
+  font-size: 18px;
+  text-align: center;
+  color: #BCBCBC;
+  margin-bottom: 20px;
+}
+
+#contactmodal .body {
+  margin-top: 30px;
+}
+
+#contactmodal {
+  height: 300px;
 }
 
 #subscribemodal {
