@@ -142,6 +142,8 @@ body {
   /*margin-bottom: 120px;*/
   background-color: #7DDDFF;
   margin: 0;
+  overflow: scroll;
+  height: 100%;
 }
 
 .location {

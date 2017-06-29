@@ -32,6 +32,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <script src="assets/js/api.js"></script> <!-- Soundcloud Widget API -->
+    <script src="assets/js/panelsnap.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/cog.js"></script>
   </head>
@@ -61,26 +62,31 @@
       </div>
     </nav><!--./navbar-->
     <div id='parent' class='container'>
-      <div class="main">
-        <div class="intro">
-          <div class="intro-card">
-            <p><span class="header">Hi there! My friend and I traveled the country, and along the way,</span> we sparked conversations with people we would normally pass by.
-              From this, we produced a podcast, which you can access just below. Hope you enjoy.</p>
-              <img class="tunacar" src="assets/images/NandT.png" alt="">
-              <p class="cheers">Cheers, <br>Takashi & Nikhil</p>
-              <p class="cheers please"><a href="#"><i class="fa fa-share" aria-hidden="true"></i>
- Share</a> <br><a href="#"><i class="fa fa-rss" aria-hidden="true"></i>
- Subscribe</a></p>
-              <p class="scroll">scroll down for more!<br><i class="fa fa-chevron-down" aria-hidden="true"></i>
-</p>
+      <div class="main" id="main">
+        <section>
+          <div class="intro">
+            <div class="intro-card">
+              <p><span class="header">Hi there! My friend and I traveled the country, and along the way,</span> we sparked conversations with people we would normally pass by.
+                From this, we produced a podcast, which you can access just below. Hope you enjoy.</p>
+                <img class="tunacar" src="assets/images/NandT.png" alt="">
+                <p class="cheers">Cheers, <br>Takashi & Nikhil</p>
+                <p class="cheers please"><a href="#"><i class="fa fa-share" aria-hidden="true"></i>
+   Share</a> <br><a href="#"><i class="fa fa-rss" aria-hidden="true"></i>
+   Subscribe</a></p>
+                <p class="scroll">scroll down for more!<br><i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </p>
+            </div>
           </div>
-        </div>
+        </section>
 
-
-        <img class="location" src="assets/images/LosAngeles.png" alt="">
-        <img class="location sign" src="assets/images/LosAngeles-Sign.png" alt="">
-        <img class="location" src="assets/images/SouthUtah.png" alt="">
-        <img class="location sign" style="margin-top: -700px" src="assets/images/SouthUtah-Sign.png" alt="">
+        <section id="SoCal">
+          <img class="location" src="assets/images/LosAngeles.png" alt="">
+          <img class="location sign" src="assets/images/LosAngeles-Sign.png" alt="">
+        </section>
+        <section id="SoUt">
+          <img class="location" src="assets/images/SouthUtah.png" alt="">
+          <img class="location sign" style="margin-top: -700px" src="assets/images/SouthUtah-Sign.png" alt="">
+        </section>
 
 
         <div class="play" id="click1">
@@ -103,8 +109,8 @@
       </div>
 
       <!-- <button type="button" id='click2'>Play2</button> -->
-    </div>
 
+    </div>
 
     <div id="cog" class="left">
       <img class="circle" src="assets/images/leftcog.png" alt="" name="leftcog">
@@ -113,6 +119,7 @@
     <div id="cog-right" class="right">
       <img class="circle" src="assets/images/rightcog.png" alt="">
     </div>
+
 
 
     <!-- <div class="foot-player">
