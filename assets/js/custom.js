@@ -45,10 +45,17 @@ jQuery(function($) {
 $(function() {
   $('a[href*="#"]:not([href="#"]):not([href="#contactmodal"]):not([href="#subscribemodal"]):not([href="#sharemodal"])').click(function() {
     console.log('yeeee234');
-    $('.main').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('.main').animate({
+        scrollTop: target.offset().top
+      }, 700);
+    // $('.main').animate({
+    //     scrollTop: $( $(this).attr('href')).offset().top
+    // }, 500);
     return false;
+    }
   })
 });
 
