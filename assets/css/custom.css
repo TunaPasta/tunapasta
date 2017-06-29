@@ -122,6 +122,12 @@ body {
   transform: translateY(-100%);
 }
 
+.modal{
+  width: 550px;
+  height: 250px;
+  background-color: white;
+}
+
 #navbar{
   background-color: #7DDDFF;
   font-family: 'Lato', sans-serif;
