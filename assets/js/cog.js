@@ -3,7 +3,7 @@ $(document).ready(function(){
    var top = true;
    var deg = 0;
    var page = 1;
-   $('#click1').hide();
+  //  $('#click1').hide();
    window.onscroll = function() {
      if (window.scrollY < bodyHeight*.75) {
        console.log("It worked here" + (window.scrollY-bodyHeight*.75));
@@ -13,7 +13,7 @@ $(document).ready(function(){
        $("#cog-right").css({
         "margin-right": ""+ window.scrollY-bodyHeight*.75 +"px",
        });
-      $('#click1').hide();
+      // $('#click1').hide();
        deg = 0;
        $('#navbar').css({
          "background-color": "#7DDFFF",

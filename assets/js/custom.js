@@ -6,10 +6,24 @@ $(document).ready(function(){
     'promo': 'https://soundcloud.com/tunapastapodcast/coming-soon',
     'ep1': ''
   };
+  var load = false;
 
   $('#click1').click(() => {
-    $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293371157&amp;auto_play=false&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
+    // console.log(widget.getCurrentSoundIndex());
+    if($("#click1").val() == ""){
+      console.log("INCREDIBLE!");
+    }
+    console.log("Hey there" + $("#click1").val());
+    if(load == false){
+      $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293371157&amp;auto_play=false&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
+    }
+    load = true;
     // widget.load(episodes['mixtape'], defaultPlayerOptions);
+    $('.foot-player').css({
+      "bottom": "0",
+    });
+    car.src = "assets/images/CaliCar-pause.png";
+    widget.toggle();
   });
 
   $('#click2').click(() => {
