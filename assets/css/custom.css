@@ -346,6 +346,7 @@ body {
   transform: translateX(-50%);
   z-index: 3;
   bottom: -100px;
+  margin-bottom: -40px;
   transition: bottom 0.3s ease-in-out;
 }
 
@@ -359,7 +360,8 @@ body {
 }
 
 .cloudplayer {
-  margin: 20px;
+  /*margin: 20px;*/
+  width: 100% !important;
 }
 
 /*.bottom {
