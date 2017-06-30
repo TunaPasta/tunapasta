@@ -20,7 +20,6 @@
       rel="stylesheet"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -32,47 +31,171 @@
     <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- <script src="/assets/custom.js"></script> -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-101715006-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+    <script src="assets/js/api.js"></script> <!-- Soundcloud Widget API -->
+    <script src="assets/js/panelsnap.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/cog.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
   </head>
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top nav-down nav-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <img class="nav-title" src="assets/images/title.png" alt="">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" data-toggle="dropdown">Episodes<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#SoCal">
+                <h3>mile 5814</h3>
+                <h2>Los Angeles</h2>
+              </a></li>
+              <li><a href="#SoUt">
+                <h3>next week</h3>
+                <h2>South Utah</h2>
+              </a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="about.html">About</a></li> -->
+          <li style="margin-right: 15px;"><a class="modal-open" href="#contactmodal">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <div id='parent' class='container'>
-      <div class="main">
-        <h3 class="date">6.30.2017</h3>
-        <img class="title" src="assets/images/title.png" alt="">
-        <p class="tagline">a podcast recorded across the US</p>
-        <iframe class="cloudplayer" width="500px" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
-        <!-- <iframe
-          width="40%" height="166" scrolling="no" frameborder="no"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&amp;color=7dddff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_artwork=false"></iframe> -->
-          <div class="links">
-            <h4 class="subscribe">Grab A Bite Yourself Soon<br>
-                on <a href="https://itunes.apple.com/us/podcast/tuna-pasta/id1251828332?mt=2" target="_blank">Apple Podcasts</a> <br>
-                or <a href="http://www.stitcher.com/s?fid=142108&refid=stpr" target="_blank">Stitcher</a></h4>
+
+      <div class="modal" id="contactmodal">
+        <i class="fa fa-times close" aria-hidden="true"></i>
+        <div class="top">
+          <h1>Get in Touch with Us</h1>
+        </div>
+        <div class="body">
+          <p class="contact">For press inquiries, please email <a href="mailto:press@tunapastapodcast.org">press@tunapastapodcast.org</a></p>
+          <p class="contact">For anything you need, please email <a href="mailto:hello@tunapastapodcast.org">hello@tunapastapodcast.org</a></p>
+          <p class="description">you can also <a href="https://twitter.com/tunapastapod" target="_blank">tweet @tunapastapod</a> or <a href="https://www.facebook.com/tunapastapodcast/" target="_blank">message us on Facebook</a></p>
+        </div>
+    	</div>
+
+      <div class="modal" id="subscribemodal">
+        <i class="fa fa-times close" aria-hidden="true"></i>
+        <div class="top">
+          <h1>Subscribe and Keep Up</h1>
+        </div>
+        <div class="body">
+          <p class="description">A new episode will be released every Friday at 12am PST. <br>You can listen here or via podcast apps.</p>
+          <a href="https://itunes.apple.com/us/podcast/tuna-pasta/id1251828332?mt=2" target="_blank">
+          <div class="half left">
+            <p class="user">Apple?</p>
+            <p class="description">use the Apple Podcast app</p>
+            <img src="assets/images/apple.png" alt="">
           </div>
-          <div class="social">
-            <a href="https://twitter.com/tunapastapod" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/tunapastapodcast" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <!-- <i class="fa fa-podcast" aria-hidden="true"></i> -->
+          </a>
+          <a href="http://www.stitcher.com/podcast/takashi-wickes/tuna-pasta" target="_blank">
+          <div class="half right">
+            <p class="user">Android?</p>
+            <p class="description">use the Stitcher Radio app</p>
+            <img src="assets/images/stitcher.png" alt="">
           </div>
+          </a>
+          <p class="description foot">you may also listen on <a href="https://soundcloud.com/tunapastapodcast" target="_blank">SoundCloud</a> or <a href="http://feeds.feedburner.com/TunaPasta">RSS Feed</a></p>
+        </div>
+    	</div>
+
+      <div class="modal" id="sharemodal">
+        <i class="fa fa-times close" aria-hidden="true"></i>
+        <div class="top">
+          <h1>Follow Us!</h1>
+        </div>
+        <div class="body">
+          <div class="half left">
+            <a href="https://www.facebook.com/tunapastapodcast" target="_blank"><p><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</p></a>
+            <a href="https://twitter.com/tunapastapod" target="_blank"><p><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</p></a>
+          </div>
+          <div class="half right">
+            <a href="#"><p><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</p></a>
+            <a href="mailto:hello@tunapastapodcast.org"><p><i class="fa fa-share" aria-hidden="true"></i> Email</p></a>
+          </div>
+        </div>
+    	</div>
+
+      <div class="main" id="main">
+        <section id="#" class="hero">
+          <div class="intro">
+            <div class="intro-card">
+              <p><span class="header">Hi there! My friend and I traveled the country, and along the way,</span> we sparked conversations with people we would normally pass by.
+                From this, we produced a podcast, which you can access just below. Hope you enjoy.</p>
+                <img class="tunacar" src="assets/images/NandT.png" alt="">
+                <p class="cheers">Cheers, <br>Takashi & Nikhil</p>
+                <p class="cheers please"><a class="modal-open" href="#sharemodal"><i class="fa fa-share" aria-hidden="true"></i>
+   Follow</a> <br><a class="modal-open" href="#subscribemodal"><i class="fa fa-rss" aria-hidden="true"></i>
+   Subscribe</a></p>
+                <a href="#SoCal"><p class="scroll">scroll down for more!<br><i class="fa fa-chevron-down" aria-hidden="true"></i></p></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="SoCal">
+          <img class="location" src="assets/images/LosAngeles.png" alt="">
+          <img class="location sign" src="assets/images/LosAngeles-Sign.png" alt="">
+        </section>
+        <section id="SoUt">
+          <img class="location" src="assets/images/SouthUtah.png" alt="">
+          <img class="location road" src="assets/images/utah-road.png" alt="">
+          <img class="location sign" style="margin-top: -700px" src="assets/images/SouthUtah-Sign.png" alt="">
+        </section>
+
+
+        <div class="play" id="1" value="HELLO!">
+          <img class="car" name="car" src="assets/images/CaliCar.png" alt="">
+          <img class="car icon" name="caricon" src="assets/images/play.png" alt="">
+          <!-- <button type="button" id='click1'>Play1</button> -->
+          <!-- <button type="button" id='click1'>Play2</button> -->
+        </div>
+
+        <!-- <iframe class="cloudplayer" width="500px" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
+        <div class="links">
+          <h4 class="subscribe">Grab A Bite Yourself Soon<br>
+              on <a href="https://itunes.apple.com/us/podcast/tuna-pasta/id1251828332?mt=2" target="_blank">Apple Podcasts</a> <br>
+              or <a href="http://www.stitcher.com/s?fid=142108&refid=stpr" target="_blank">Stitcher</a></h4>
+        </div>
+        <div class="social">
+          <a href="https://twitter.com/tunapastapod" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/tunapastapodcast" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <i class="fa fa-podcast" aria-hidden="true"></i>
+        </div> -->
+      </div>
+
+      <!-- <button type="button" id='click2'>Play2</button> -->
+
+    </div>
+
+    <div id="cog" class="left">
+      <img class="circle" src="assets/images/leftcog.png" alt="" name="leftcog">
+    </div>
+
+    <div id="cog-right" class="right">
+      <img class="circle" src="assets/images/rightcog.png" alt="">
+    </div>
+
+
+
+    <div class="foot-player">
+      <div class="mask">
+        <iframe id='cloudplayer' class="cloudplayer bottom" width="1080px" height="140px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false"></iframe>
       </div>
     </div>
-    <!-- <div class="foot-player">
-      <iframe class="cloudplayer bottom" width="1080px" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329615571&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false"></iframe>
-    </div> -->
 
-    <p class="footer"><a href="https://goo.gl/forms/XESLQnBO1eN8WKtE2" target="_blank">get notified with each episode</a></p>
     <img class="takashi" src="assets/images/takashi.png" alt="">
     <img class="nikhil" src="assets/images/nikhil.png" alt="">
+    <!-- <p class="footer"><a href="https://goo.gl/forms/XESLQnBO1eN8WKtE2" target="_blank">get notified with each episode</a></p> -->
+
 
   </body>
 </html>
