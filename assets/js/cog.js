@@ -9,15 +9,15 @@ $(document).ready(function(){
    var carPercentage = $('#SoCal').height()*0.4114;
    var firstChange = $('.hero').height() + carPercentage - (bodyHeight - 200);
    var secondChange = $('.hero').height() + $('#SoCal').height() + carPercentage - (bodyHeight - 200);
-   console.log("Change" + firstChange);
+  //  console.log("Change" + firstChange);
   //  var changeHeight = $('.hero').height();
    var changeHeight = bodyHeight*0.75;
 
 
    div.scroll(function() {
     //  console.log("Change" + firstChange);
-     console.log("First change " + firstChange);
-     console.log("Scroll " + div.scrollTop());
+    //  console.log("First change " + firstChange);
+    //  console.log("Scroll " + div.scrollTop());
      if (div.scrollTop() < changeHeight) {
        $("#cog").css({
         "margin-left": ""+div.scrollTop()-bodyHeight*.75 +"px",
