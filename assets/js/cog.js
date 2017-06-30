@@ -8,7 +8,7 @@ $(document).ready(function(){
 
    div.scroll(function() {
      if (div.scrollTop() < bodyHeight*.75) {
-       console.log("It worked here" + (div.scrollTop()-bodyHeight*.75));
+      //  console.log("It worked here" + (div.scrollTop()-bodyHeight*.75));
        $("#cog").css({
         "margin-left": ""+div.scrollTop()-bodyHeight*.75 +"px",
        });
@@ -37,7 +37,7 @@ $(document).ready(function(){
       //Determine the amount to rotate by.
       // console.log(1+bodyHeight/980);
 
-      console.log("Page is " + page);
+      // console.log("Page is " + page);
       if (div.scrollTop() > (bodyHeight*.75)-210){
         page = 1;
         setPlayID(page);
