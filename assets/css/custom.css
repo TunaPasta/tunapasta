@@ -298,7 +298,7 @@ body {
 
 .location {
   position: relative;
-  margin: 0px 100px 0px 100px;
+  margin: 0px 200px 0px 200px;
   width: 482px;
   pointer-events: none;
 }
@@ -306,6 +306,10 @@ body {
 .sign {
   z-index: 2;
   margin-top: -600px;
+}
+
+.road {
+  display: none;
 }
 
 .continued {
@@ -442,6 +446,52 @@ a:visited, a:active {
 }
 
 @media screen and (max-width:770px){
+
+  .modal {
+      margin-left: 0 !important;
+      transform: translateX(-50%) !important;
+      width: 280px;
+  }
+
+  .modal .half {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .modal p {
+    margin-bottom: 10px;
+  }
+
+  .modal .body {
+    padding: 20px 20px;
+  }
+
+  .modal .right {
+    left: 0;
+    top: 0;
+  }
+
+  .modal img {
+    display: none;
+  }
+
+  .modal .description {
+    margin-top: -10px;
+  }
+
+  .modal .user {
+    margin-top: 0px;
+  }
+
+  #subscribemodal .right {
+    top: 0;
+  }
+
+  #subscribemodal .foot {
+    margin-top: 0;
+    font-size: 12px;
+  }
+
   .intro-card {
     width: 100%;
     padding: 20px;
@@ -479,15 +529,16 @@ a:visited, a:active {
   }
 
   .road {
+    display: inline;
     margin-top: -40px;
   }
 
   #SoUt .sign {
-    margin-top: -677px !important;
+    margin-top: -181% !important;
   }
 
-.sign {
-    margin-top: -465px;
+  .sign {
+    margin-top: -124%;
   }
 
   #cog {
@@ -510,8 +561,9 @@ a:visited, a:active {
     font-size: 14px;
   }
 
-  .cloudplayer{
-    width: 80%;
+  .foot-player {
+    padding: 0;
+    /*bottom: 20px !important;*/
   }
 
   .takashi{
