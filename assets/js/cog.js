@@ -1,14 +1,24 @@
 $(document).ready(function(){
    var div = $('#main');
    var bodyHeight = div.height();
+   var scroller = $('.hero');
    var top = true;
    var deg = 0;
    var page = 1;
    $('.play').hide();
+   var carPercentage = $('#SoCal').height()*0.4114;
+   var firstChange = $('.hero').height() + carPercentage - (bodyHeight - 200);
+   var secondChange = $('.hero').height() + $('#SoCal').height() + carPercentage - (bodyHeight - 200);
+   console.log("Change" + firstChange);
+  //  var changeHeight = $('.hero').height();
+   var changeHeight = bodyHeight*0.75;
+
 
    div.scroll(function() {
-     if (div.scrollTop() < bodyHeight*.75) {
-       console.log("It worked here" + (div.scrollTop()-bodyHeight*.75));
+    //  console.log("Change" + firstChange);
+     console.log("First change " + firstChange);
+     console.log("Scroll " + div.scrollTop());
+     if (div.scrollTop() < changeHeight) {
        $("#cog").css({
         "margin-left": ""+div.scrollTop()-bodyHeight*.75 +"px",
        });
@@ -37,8 +47,8 @@ $(document).ready(function(){
       //Determine the amount to rotate by.
       // console.log(1+bodyHeight/980);
 
-      console.log("Page is " + page);
-      if (div.scrollTop() > (bodyHeight*.75)-210){
+      // console.log("Page is " + page);
+      if (div.scrollTop() > firstChange){
         page = 1;
         setPlayID(page);
         $('.play').show();
@@ -48,7 +58,7 @@ $(document).ready(function(){
           "background-color": "#5ADCFF",
         });
       }
-      if (div.scrollTop() > (2*bodyHeight*.75)-150) {
+      if (div.scrollTop() > secondChange) {
         page = -1;
         setPlayID(page);
         $('.icon').hide();
