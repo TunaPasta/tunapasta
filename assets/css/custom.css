@@ -442,6 +442,62 @@ a:visited, a:active {
 }
 
 @media screen and (max-width:770px){
+  .intro-card {
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .intro-card p {
+    font-size: 16px;
+  }
+
+  .intro-card .header {
+    font-size: 26px;
+  }
+
+  .intro {
+    padding: 70px 20px;
+    height: 630px;
+  }
+
+  .intro .cheers {
+    bottom: 60px;
+  }
+
+  .intro .please {
+    bottom: 130px;
+  }
+
+  .intro .scroll {
+    bottom: 100px;
+  }
+
+  .location {
+    width: 100%;
+    margin: 0;
+  }
+
+  .road {
+    margin-top: -40px;
+  }
+
+  #SoUt .sign {
+    margin-top: -677px !important;
+  }
+
+.sign {
+    margin-top: -465px;
+  }
+
+  #cog {
+    display: none;
+  }
+
+  #cog-right {
+    display: none;
+  }
+
   .main{
     width: 100%;
   }
