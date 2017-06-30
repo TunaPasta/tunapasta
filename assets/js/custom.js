@@ -17,7 +17,7 @@ $(document).ready(function(){
       return;
     }
     if(loadedTrack != selectedTrack){
-      $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330851792&amp;auto_play=true&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
+      $("#cloudplayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330851792&amp;auto_play=false&amp;hide_related=false&amp;color=7dddff&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false");
       loadedTrack = selectedTrack;
 
     } else {
