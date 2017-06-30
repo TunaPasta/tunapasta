@@ -21,6 +21,17 @@ $(document).ready(function(){
       loadedTrack = selectedTrack;
 
     } else {
+      widget.bind(SC.Widget.Events.READY, function() {
+        console.log('ye');
+        widget.bind(SC.Widget.Events.PLAY, function() {
+          caricon.src = "assets/images/pause.png"
+          console.log('yee');
+        });
+        widget.bind(SC.Widget.Events.PAUSE, function() {
+          caricon.src = "assets/images/play.png"
+          console.log('yeesssss');
+        });
+      });
       widget.toggle();
     }
     if(playingTrack == selectedTrack){
