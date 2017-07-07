@@ -1,39 +1,37 @@
 $(document).ready(function(){
    var div = $('#main');
-   var bodyHeight = div.height();
+   var bodyHeight = $('.hero').height();
    var scroller = $('.hero');
    var top = true;
    var deg = 0;
    var page = 1;
    $('.play').hide();
    var carPercentage = $('#SoCal').height()*0.4114;
-   var firstChange = $('.hero').height() + carPercentage - (bodyHeight - 200);
-   var secondChange = $('.hero').height() + $('#SoCal').height() + carPercentage - (bodyHeight - 200);
-   console.log("Change" + firstChange);
+   var firstChange = $('.hero').height() + carPercentage - (bodyHeight - 50);
+   var secondChange = firstChange + $('#SoCal').height();
+   var thirdChange = secondChange + $('#SoUtah').height();
   //  var changeHeight = $('.hero').height();
    var changeHeight = bodyHeight*0.75;
 
 
    div.scroll(function() {
     //  console.log("Change" + firstChange);
-     console.log("First change " + firstChange);
-     console.log("Scroll " + div.scrollTop());
-     if (div.scrollTop() < changeHeight) {
+
+     if (div.scrollTop() < bodyHeight) {
        $("#cog").css({
-        "margin-left": ""+div.scrollTop()-bodyHeight*.75 +"px",
+        "margin-left": ""+div.scrollTop()-bodyHeight +"px",
        });
        $("#cog-right").css({
-        "margin-right": ""+ div.scrollTop()-bodyHeight*.75 +"px",
+        "margin-right": ""+ div.scrollTop()-bodyHeight +"px",
        });
-       deg = -(div.scrollTop()-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
-
+      //  deg = -(div.scrollTop()-firstChange)/(1+bodyHeight/1000)*(360/bodyHeight);
 
        $(".takashi").css({
-         "margin-bottom": ""+ div.scrollTop()-bodyHeight*.75 +"px",
+         "margin-bottom": ""+ div.scrollTop()-bodyHeight +"px",
          "transform": "rotate("+(deg)+"deg)",
        });
        $(".nikhil").css({
-         "margin-bottom": ""+ div.scrollTop()-bodyHeight*.75 +"px",
+         "margin-bottom": ""+ div.scrollTop()-bodyHeight +"px",
          "transform": "rotate(-"+(deg-10)+"deg)",
        });
 
@@ -59,6 +57,16 @@ $(document).ready(function(){
         });
       }
       if (div.scrollTop() > secondChange) {
+        page = 2;
+        setPlayID(page);
+        // $('.icon').hide();
+        // $('.play').show();
+        car.src = "assets/images/SoUtCar.png";
+        // $(".play").css({
+        //   "background-color": "blue",
+        // });
+      }
+      if (div.scrollTop() > thirdChange) {
         page = -1;
         setPlayID(page);
         $('.icon').hide();
@@ -68,8 +76,17 @@ $(document).ready(function(){
         //   "background-color": "blue",
         // });
       }
-      if(div.scrollTop() >= bodyHeight*.75){
-        deg = -(div.scrollTop()-bodyHeight*0.75)/(1+bodyHeight/1000)*(360/bodyHeight);
+      if (div.scrollTop() > secondChange - carPercentage + (bodyHeight - 50)) {
+        $("#cog").css({
+         "margin-left": ""-div.scrollTop()+(secondChange - carPercentage + (bodyHeight - 50)) +"px",
+        });
+        $("#cog-right").css({
+         "margin-right": ""- div.scrollTop()+(secondChange - carPercentage + (bodyHeight - 50)) +"px",
+        });
+      }
+      if(div.scrollTop() >= bodyHeight){
+        deg = -(div.scrollTop()-bodyHeight) * (360/( $('#SoCal').height()+$('#SoCal').height() ));
+        // deg = -(div.scrollTop()-(bodyHeight))(360/($('#SoCal').height()));
         // if (window.scrollY < bodyHeight) {
         //   leftcog.src = "assets/images/leftcog.png";
         // }
