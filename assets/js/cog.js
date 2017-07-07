@@ -9,7 +9,6 @@ $(document).ready(function(){
    var carPercentage = $('#SoCal').height()*0.4114;
    var firstChange = $('.hero').height() + carPercentage - (bodyHeight - 50);
    var secondChange = firstChange + $('#SoCal').height();
-   var thirdChange = secondChange + $('#SoUtah').height();
   //  var changeHeight = $('.hero').height();
    var changeHeight = bodyHeight*0.75;
 
