@@ -6,8 +6,12 @@ $(document).ready(function(){
    var deg = 0;
    var page = 1;
    $('.play').hide();
+   var subtract = 50;
    var carPercentage = $('#SoCal').height()*0.4114;
-   var firstChange = $('.hero').height() + carPercentage - (bodyHeight - 50);
+   if($('body').width() < 770 ){
+     subtract = subtract + 110;
+   }
+   var firstChange = $('.hero').height() + carPercentage - (bodyHeight - subtract);
    var secondChange = firstChange + $('#SoCal').height();
    var thirdChange = secondChange + $('#SoUtah').height();
   //  var changeHeight = $('.hero').height();
@@ -15,7 +19,9 @@ $(document).ready(function(){
 
 
    div.scroll(function() {
-    //  console.log("Change" + firstChange);
+     console.log("Change" + firstChange);
+     console.log("Scroll" + div.scrollTop());
+
 
      if (div.scrollTop() < bodyHeight) {
        $("#cog").css({
@@ -76,12 +82,12 @@ $(document).ready(function(){
         //   "background-color": "blue",
         // });
       }
-      if (div.scrollTop() > secondChange - carPercentage + (bodyHeight - 50)) {
+      if (div.scrollTop() > secondChange - carPercentage + (bodyHeight - subtract)) {
         $("#cog").css({
-         "margin-left": ""-div.scrollTop()+(secondChange - carPercentage + (bodyHeight - 50)) +"px",
+         "margin-left": ""-div.scrollTop()+(secondChange - carPercentage + (bodyHeight - subtract)) +"px",
         });
         $("#cog-right").css({
-         "margin-right": ""- div.scrollTop()+(secondChange - carPercentage + (bodyHeight - 50)) +"px",
+         "margin-right": ""- div.scrollTop()+(secondChange - carPercentage + (bodyHeight - subtract)) +"px",
         });
       }
       if(div.scrollTop() >= bodyHeight){

@@ -310,7 +310,7 @@ body::after {
 
 .sign {
   z-index: 2;
-  margin-top: -600px;
+  margin-top: -598px;
 }
 
 .road {
@@ -558,6 +558,10 @@ a:visited, a:active {
 
   .sign {
     margin-top: -124%;
+  }
+
+  #SoUtah .sign {
+    margin-top: -151% !important;
   }
 
   #cog {
