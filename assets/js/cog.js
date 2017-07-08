@@ -10,6 +10,7 @@ $(document).ready(function(){
    var carPercentage = $('#SoCal').height()*0.4114;
    if($('body').width() < 770 ){
      subtract = subtract + 110;
+     $('.play').css({"width": $('.location').width()*0.25});
    }
    var firstChange = $('.hero').height() + carPercentage - (bodyHeight - subtract);
    var secondChange = firstChange + $('#SoCal').height();
