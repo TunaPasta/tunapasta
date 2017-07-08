@@ -117,6 +117,11 @@ function togglePlayShare(){
 
 function setPlayID(id){
   $('.play').attr('id', id);
+  if(playingTrack == id){
+    caricon.src = "assets/images/pause.png"
+  } else {
+    caricon.src = "assets/images/play.png"
+  }
 }
 
 // $(document).ready(function(){

@@ -1,3 +1,5 @@
+var playingTrack = 0;
+
 $(document).ready(function(){
   var widget  = SC.Widget($('#cloudplayer').attr('id'));
   var defaultPlayerOptions = {show_artwork: false, show_comments: false, auto_play: true, visual: false};
@@ -13,7 +15,6 @@ $(document).ready(function(){
   }
   var load = false;
   var loadedTrack = 0;
-  var playingTrack = 0;
 
   $('.play').click(() => {
     var selectedTrack = $(".play").attr('id');
