@@ -19,6 +19,10 @@ body::after {
   content: url("../images/Road-SoUt.png"), url("../images/SoUtCar.png"), url("../images/ShareCar.png"), url("../images/CaliCar.png"),;
 }
 
+#SoCal .location {
+  content: url("../images/LosAngeles.png"));
+}
+
 #navbar{
   background-color: #7DDDFF;
   font-family: 'Lato', sans-serif;
