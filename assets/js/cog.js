@@ -14,8 +14,7 @@ $(document).ready(function(){
       if ($('#SoCal').length) {
          console.log("Exists!");
          heightSoCal = $('#SoCal').height();
-         heightSoUtah = $('#SoUtah').height();
-         heightHero = $('.hero').height()
+         clearInterval(checkExist);
       }
    }, 100);
 
