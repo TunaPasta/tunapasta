@@ -1,5 +1,13 @@
 var playingTrack = 0;
 
+$.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
+
+$.preloadImages("../images/LosAngeles.png","../images/LogAngeles.png");
+
 $(document).ready(function(){
   var widget  = SC.Widget($('#cloudplayer').attr('id'));
   var defaultPlayerOptions = {show_artwork: false, show_comments: false, auto_play: true, visual: false};
