@@ -52,7 +52,9 @@ $(document).ready(function(){
    var changeHeight = heightHero*0.75;
 
    div.scroll(function() {
-    //  console.log("Change" + firstChange);
+     console.log("First Change" + firstChange);
+     console.log("Second Change" + secondChange);
+     console.log("Third Change" + thirdChange);
     //  console.log("Scroll" + div.scrollTop());
     if(allLoaded){
      if (div.scrollTop() < heightHero) {
