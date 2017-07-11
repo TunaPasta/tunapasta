@@ -6,11 +6,11 @@ $(document).ready(function(){
       console.log("SoCal" + $('#SoCal').height());
       console.log("SoUtah" + $('#SoUtah').height());
 
-       if ($('#SoCal').height() > 30) {
+       if ($('#SoCal').height() > 30 && heightSoCal > 20) {
           heightSoCal = $('#SoCal').height();
-       } else if ($('#SoUtah').height() > 30) {
+       } else if ($('#SoUtah').height() > 30 && heightSoUtah > 20) {
           heightSoUtah = $('#SoUtah').height();
-       } else if(heightSoCal > 20 && heightSoUtah > 20) {
+       } else {
          console.log("Height socal: " + heightSoCal);
          console.log("Height soutah: " + heightSoUtah);
          carPercentage = heightSoCal*0.4114;
