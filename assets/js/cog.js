@@ -11,15 +11,26 @@ $(document).ready(function(){
    var heightHero = $('.hero').height()
 
    var checkExist = setInterval(function() {
-      if ($('#SoCal').length) {
+      if ($('#SoCal').height != 0 && heightSoCal == 0) {
          console.log("Exists!");
          heightSoCal = $('#SoCal').height();
-         clearInterval(checkExist);
+      } else if ($('#SoUtah').height != 0 && heightSoUtah == 0) {
+         console.log("Exists!");
+         heightSoUtah = $('#SoUtah').height();
+      } else if ($('.hero').height != 0 && heightHero == 0) {
+         console.log("Exists!");
+         heightHero = $('.hero').height();
+      } else {
+        console.log("GREAT!");
+        clearInterval(checkExist);
       }
    }, 100);
 
    var carPercentage = heightSoCal*0.4114;
    console.log("SoCal height " +  heightSoCal);
+   console.log("SoUtah height " +  heightSoUtah);
+   console.log("Hero height " +  heightHero);
+
 
 
 
