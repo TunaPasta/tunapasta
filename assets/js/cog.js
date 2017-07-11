@@ -8,6 +8,8 @@ $(document).ready(function(){
        } else if ($('#SoUtah').height > 20 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
        } else {
+         console.log("Height socal: " + heightSoCal);
+         console.log("Height soutah: " + heightSoUtah);
          carPercentage = heightSoCal*0.4114;
          firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
          secondChange = firstChange + heightSoCal;
