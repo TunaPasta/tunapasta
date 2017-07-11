@@ -1,4 +1,27 @@
 $(document).ready(function(){
+
+    var allLoaded = false
+
+    var checkExist = setInterval(function() {
+       if ($('#SoCal').height != 0 && heightSoCal == 0) {
+          console.log("Exists!");
+          heightSoCal = $('#SoCal').height();
+       } else if ($('#SoUtah').height != 0 && heightSoUtah == 0) {
+          console.log("Exists!");
+          heightSoUtah = $('#SoUtah').height();
+       } else if ($('.hero').height != 0 && heightHero == 0) {
+          console.log("Exists!");
+          heightHero = $('.hero').height();
+       } else {
+         console.log("GREAT!");
+         console.log("SoCal height " +  heightSoCal);
+         console.log("SoUtah height " +  heightSoUtah);
+         console.log("Hero height " +  heightHero);
+         clearInterval(checkExist);
+         allLoaded = true;
+       }
+    }, 100);
+
    var div = $('#main');
    var scroller = $('.hero');
    var top = true;
@@ -9,25 +32,6 @@ $(document).ready(function(){
    var heightSoCal = $('#SoCal').height();
    var heightSoUtah = $('#SoUtah').height();
    var heightHero = $('.hero').height()
-
-   var checkExist = setInterval(function() {
-      if ($('#SoCal').height != 0 && heightSoCal == 0) {
-         console.log("Exists!");
-         heightSoCal = $('#SoCal').height();
-      } else if ($('#SoUtah').height != 0 && heightSoUtah == 0) {
-         console.log("Exists!");
-         heightSoUtah = $('#SoUtah').height();
-      } else if ($('.hero').height != 0 && heightHero == 0) {
-         console.log("Exists!");
-         heightHero = $('.hero').height();
-      } else {
-        console.log("GREAT!");
-        console.log("SoCal height " +  heightSoCal);
-        console.log("SoUtah height " +  heightSoUtah);
-        console.log("Hero height " +  heightHero);
-        clearInterval(checkExist);
-      }
-   }, 100);
 
    var carPercentage = heightSoCal*0.4114;
    console.log("Initial SoCal height " +  heightSoCal);
@@ -47,12 +51,10 @@ $(document).ready(function(){
   //  var changeHeight = $('.hero').height();
    var changeHeight = heightHero*0.75;
 
-
    div.scroll(function() {
     //  console.log("Change" + firstChange);
     //  console.log("Scroll" + div.scrollTop());
-
-
+    if(allLoaded){
      if (div.scrollTop() < heightHero) {
        $("#cog").css({
         "margin-left": ""+div.scrollTop()-heightHero +"px",
@@ -137,7 +139,9 @@ $(document).ready(function(){
         "transform": "rotate("+-deg+"deg)",
       });
 
-
+    } else {
+      checkExist();
+    }
    });
 });
 
