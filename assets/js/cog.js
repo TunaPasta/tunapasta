@@ -3,9 +3,9 @@ $(document).ready(function(){
     var allLoaded = false
 
     var checkExist = setInterval(function() {
-       if ($('#SoCal').height != 0 && heightSoCal == 0) {
+       if ($('#SoCal').height > 20 && heightSoCal == 0) {
           heightSoCal = $('#SoCal').height();
-       } else if ($('#SoUtah').height != 0 && heightSoUtah == 0) {
+       } else if ($('#SoUtah').height > 20 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
        } else {
          carPercentage = heightSoCal*0.4114;
