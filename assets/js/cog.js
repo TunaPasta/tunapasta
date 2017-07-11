@@ -3,6 +3,9 @@ $(document).ready(function(){
     var allLoaded = false
 
     var checkExist = setInterval(function() {
+      console.log("SoCal" + $('#SoCal').height);
+      console.log("SoUtah" + $('#SoUtah').height);
+
        if ($('#SoCal').height > 30 && heightSoCal == 0) {
           heightSoCal = $('#SoCal').height();
        } else if ($('#SoUtah').height > 30 && heightSoUtah == 0) {
