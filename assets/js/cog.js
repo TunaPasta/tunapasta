@@ -3,12 +3,12 @@ $(document).ready(function(){
     var allLoaded = false
 
     var checkExist = setInterval(function() {
-      console.log("SoCal" + $('#SoCal').height);
-      console.log("SoUtah" + $('#SoUtah').height);
+      console.log("SoCal" + $('#SoCal').height());
+      console.log("SoUtah" + $('#SoUtah').height());
 
-       if ($('#SoCal').height > 30 && heightSoCal == 0) {
+       if ($('#SoCal').height() > 30 && heightSoCal == 0) {
           heightSoCal = $('#SoCal').height();
-       } else if ($('#SoUtah').height > 30 && heightSoUtah == 0) {
+       } else if ($('#SoUtah').height() > 30 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
        } else {
          console.log("Height socal: " + heightSoCal);
