@@ -6,7 +6,7 @@ $.preloadImages = function() {
   }
 }
 
-$.preloadImages("assets/images/LosAngeles.png","assets/images/SouthUtah.png");
+$.preloadImages("assets/images/LosAngeles.png", "assets/images/SouthUtah.png", "assets/images/SaltLakeCity.png");
 
 $(document).ready(function(){
   var widget  = SC.Widget($('#cloudplayer').attr('id'));

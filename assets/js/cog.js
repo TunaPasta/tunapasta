@@ -20,8 +20,8 @@ $(document).ready(function(){
 
 
    div.scroll(function() {
-     console.log("Change" + firstChange);
-     console.log("Scroll" + div.scrollTop());
+    //  console.log("Change" + firstChange);
+    //  console.log("Scroll" + div.scrollTop());
 
 
      if (div.scrollTop() < bodyHeight) {
