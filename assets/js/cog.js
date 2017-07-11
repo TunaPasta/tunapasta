@@ -17,6 +17,9 @@ $(document).ready(function(){
          console.log("SoCal height " +  heightSoCal);
          console.log("SoUtah height " +  heightSoUtah);
          console.log("Hero height " +  heightHero);
+         firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
+         secondChange = firstChange + heightSoCal;
+         thirdChange = secondChange + heightSoUtah;
          clearInterval(checkExist);
          allLoaded = true;
        }
