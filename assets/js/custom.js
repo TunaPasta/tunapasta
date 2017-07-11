@@ -2,7 +2,6 @@ var playingTrack = 0;
 
 $.preloadImages = function() {
   for (var i = 0; i < arguments.length; i++) {
-    console.log('yuh');
     $("<img />").attr("src", arguments[i]);
   }
 }

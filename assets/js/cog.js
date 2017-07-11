@@ -3,20 +3,11 @@ $(document).ready(function(){
     var allLoaded = false
 
     var checkExist = setInterval(function() {
-       if ($('#SoCal').height != 0 && heightSoCal == 0) {
-          console.log("Exists!");
+       if ($('#SoCal').height >= 20 && heightSoCal == 0) {
           heightSoCal = $('#SoCal').height();
-       } else if ($('#SoUtah').height != 0 && heightSoUtah == 0) {
-          console.log("Exists!");
+       } else if ($('#SoUtah').height >= 20 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
-       } else if ($('.hero').height != 0 && heightHero == 0) {
-          console.log("Exists!");
-          heightHero = $('.hero').height();
        } else {
-         console.log("GREAT!");
-         console.log("SoCal height " +  heightSoCal);
-         console.log("SoUtah height " +  heightSoUtah);
-         console.log("Hero height " +  heightHero);
          carPercentage = heightSoCal*0.4114;
          firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
          secondChange = firstChange + heightSoCal;
@@ -38,12 +29,6 @@ $(document).ready(function(){
    var heightHero = $('.hero').height()
 
    var carPercentage = heightSoCal*0.4114;
-   console.log("Initial SoCal height " +  heightSoCal);
-   console.log("Initial SoUtah height " +  heightSoUtah);
-   console.log("Initial Hero height " +  heightHero);
-
-
-
 
    if($('body').width() < 770 ){
      subtract = subtract + 110;
@@ -56,9 +41,6 @@ $(document).ready(function(){
    var changeHeight = heightHero*0.75;
 
    div.scroll(function() {
-     console.log("First Change" + firstChange);
-     console.log("Second Change" + secondChange);
-     console.log("Third Change" + thirdChange);
     //  console.log("Scroll" + div.scrollTop());
     if(allLoaded){
      if (div.scrollTop() < heightHero) {
