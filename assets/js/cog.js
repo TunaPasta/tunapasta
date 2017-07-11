@@ -17,6 +17,7 @@ $(document).ready(function(){
          console.log("SoCal height " +  heightSoCal);
          console.log("SoUtah height " +  heightSoUtah);
          console.log("Hero height " +  heightHero);
+         carPercentage = heightSoCal*0.4114;
          firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
          secondChange = firstChange + heightSoCal;
          thirdChange = secondChange + heightSoUtah;
