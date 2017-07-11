@@ -8,6 +8,7 @@ $(document).ready(function(){
    $('.play').hide();
    var subtract = 50;
    var carPercentage = $('#SoCal').height()*0.4114;
+   console.log("SoCal height " +  $('#SoCal').height());
    if($('body').width() < 770 ){
      subtract = subtract + 110;
      $('.play').css({"width": $('.location').width()*0.25});
