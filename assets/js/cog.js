@@ -22,14 +22,17 @@ $(document).ready(function(){
          heightHero = $('.hero').height();
       } else {
         console.log("GREAT!");
+        console.log("SoCal height " +  heightSoCal);
+        console.log("SoUtah height " +  heightSoUtah);
+        console.log("Hero height " +  heightHero);
         clearInterval(checkExist);
       }
    }, 100);
 
    var carPercentage = heightSoCal*0.4114;
-   console.log("SoCal height " +  heightSoCal);
-   console.log("SoUtah height " +  heightSoUtah);
-   console.log("Hero height " +  heightHero);
+   console.log("Initial SoCal height " +  heightSoCal);
+   console.log("Initial SoUtah height " +  heightSoUtah);
+   console.log("Initial Hero height " +  heightHero);
 
 
 
