@@ -14,20 +14,10 @@ $(document).ready(function(){
       if ($('#SoCal').length) {
          console.log("Exists!");
          heightSoCal = $('#SoCal').height();
+         heightSoUtah = $('#SoUtah').height();
+         heightHero = $('.hero').height()
       }
    }, 100);
-
-
-
-   if(heightSoCal == 0){
-     heightSoCal = 598;
-   }
-   if(heightSoUtah = 0){
-     heightSoUtah = 701;
-   }
-   if(heightHero == 0){
-     heightHero = 541;
-   }
 
    var carPercentage = heightSoCal*0.4114;
    console.log("SoCal height " +  heightSoCal);
