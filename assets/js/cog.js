@@ -1,23 +1,48 @@
 $(document).ready(function(){
    var div = $('#main');
-   var bodyHeight = $('.hero').height();
    var scroller = $('.hero');
    var top = true;
    var deg = 0;
    var page = 1;
    $('.play').hide();
    var subtract = 50;
-   var carPercentage = $('#SoCal').height()*0.4114;
-   console.log("SoCal height " +  $('#SoCal').height());
+   var heightSoCal = $('#SoCal').height();
+   var heightSoUtah = $('#SoUtah').height();
+   var heightHero = $('.hero').height()
+
+   var checkExist = setInterval(function() {
+      if ($('#SoCal').length) {
+         console.log("Exists!");
+         heightSoCal = $('#SoCal').height();
+      }
+   }, 100);
+
+
+
+   if(heightSoCal == 0){
+     heightSoCal = 598;
+   }
+   if(heightSoUtah = 0){
+     heightSoUtah = 701;
+   }
+   if(heightHero == 0){
+     heightHero = 541;
+   }
+
+   var carPercentage = heightSoCal*0.4114;
+   console.log("SoCal height " +  heightSoCal);
+
+
+
    if($('body').width() < 770 ){
      subtract = subtract + 110;
      $('.play').css({"width": $('.location').width()*0.25});
    }
-   var firstChange = $('.hero').height() + carPercentage - (bodyHeight - subtract);
-   var secondChange = firstChange + $('#SoCal').height();
-   var thirdChange = secondChange + $('#SoUtah').height();
+   var firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
+   var secondChange = firstChange + heightSoCal;
+   var thirdChange = secondChange + heightSoUtah;
   //  var changeHeight = $('.hero').height();
-   var changeHeight = bodyHeight*0.75;
+   var changeHeight = heightHero*0.75;
 
 
    div.scroll(function() {
@@ -25,21 +50,21 @@ $(document).ready(function(){
     //  console.log("Scroll" + div.scrollTop());
 
 
-     if (div.scrollTop() < bodyHeight) {
+     if (div.scrollTop() < heightHero) {
        $("#cog").css({
-        "margin-left": ""+div.scrollTop()-bodyHeight +"px",
+        "margin-left": ""+div.scrollTop()-heightHero +"px",
        });
        $("#cog-right").css({
-        "margin-right": ""+ div.scrollTop()-bodyHeight +"px",
+        "margin-right": ""+ div.scrollTop()-heightHero +"px",
        });
-      //  deg = -(div.scrollTop()-firstChange)/(1+bodyHeight/1000)*(360/bodyHeight);
+      //  deg = -(div.scrollTop()-firstChange)/(1+heightHero/1000)*(360/heightHero);
 
        $(".takashi").css({
-         "margin-bottom": ""+ div.scrollTop()-bodyHeight +"px",
+         "margin-bottom": ""+ div.scrollTop()-heightHero +"px",
          "transform": "rotate("+(deg)+"deg)",
        });
        $(".nikhil").css({
-         "margin-bottom": ""+ div.scrollTop()-bodyHeight +"px",
+         "margin-bottom": ""+ div.scrollTop()-heightHero +"px",
          "transform": "rotate(-"+(deg-10)+"deg)",
        });
 
@@ -51,7 +76,7 @@ $(document).ready(function(){
      }
     //  console.log("Leftside");
       //Determine the amount to rotate by.
-      // console.log(1+bodyHeight/980);
+      // console.log(1+heightHero/980);
 
       // console.log("Page is " + page);
       if (div.scrollTop() > firstChange){
@@ -84,21 +109,21 @@ $(document).ready(function(){
         //   "background-color": "blue",
         // });
       }
-      if (div.scrollTop() > secondChange - carPercentage + (bodyHeight - subtract)) {
+      if (div.scrollTop() > secondChange - carPercentage + (heightHero - subtract)) {
         $("#cog").css({
-         "margin-left": ""-div.scrollTop()+(secondChange - carPercentage + (bodyHeight - subtract)) +"px",
+         "margin-left": ""-div.scrollTop()+(secondChange - carPercentage + (heightHero - subtract)) +"px",
         });
         $("#cog-right").css({
-         "margin-right": ""- div.scrollTop()+(secondChange - carPercentage + (bodyHeight - subtract)) +"px",
+         "margin-right": ""- div.scrollTop()+(secondChange - carPercentage + (heightHero - subtract)) +"px",
         });
       }
-      if(div.scrollTop() >= bodyHeight){
-        deg = -(div.scrollTop()-bodyHeight) * (360/( $('#SoCal').height()+$('#SoCal').height() ));
-        // deg = -(div.scrollTop()-(bodyHeight))(360/($('#SoCal').height()));
-        // if (window.scrollY < bodyHeight) {
+      if(div.scrollTop() >= heightHero){
+        deg = -(div.scrollTop()-heightHero) * (360/( heightSoCal+heightSoCal ));
+        // deg = -(div.scrollTop()-(heightHero))(360/(heightSoCal));
+        // if (window.scrollY < heightHero) {
         //   leftcog.src = "assets/images/leftcog.png";
         // }
-        // if (window.scrollY > bodyHeight) {
+        // if (window.scrollY > heightHero) {
         //   leftcog.src = "assets/images/SLCcogleft.png";
         // }
       }
@@ -127,12 +152,12 @@ function setPlayID(id){
 }
 
 // $(document).ready(function(){
-//    var bodyHeight = $(window).height();
+//    var heightHero = $(window).height();
 //    window.onscroll = function() {
 //      console.log("Rightside");
 //
 //       //Determine the amount to rotate by.
-//       var deg = +window.scrollY/1.7*(360/bodyHeight);
+//       var deg = +window.scrollY/1.7*(360/heightHero);
 //       $("#cog-right").css({
 //         "transform": "rotate("+deg+"deg)",
 //       });
