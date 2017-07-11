@@ -7,8 +7,14 @@ $(document).ready(function(){
       console.log("SoUtah" + $('#SoUtah').height());
 
        if ($('#SoCal').height() > 30 && heightSoCal == 0) {
+         if ($('#SoCal').height() == 20) {
+           continue;
+         }
           heightSoCal = $('#SoCal').height();
        } else if ($('#SoUtah').height() > 30 && heightSoUtah == 0) {
+         if ($('#SoUtah').height() == 20) {
+           continue;
+         }
           heightSoUtah = $('#SoUtah').height();
        } else {
          console.log("Height socal: " + heightSoCal);
