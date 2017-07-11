@@ -6,7 +6,15 @@ $.preloadImages = function() {
   }
 }
 
-$.preloadImages("assets/images/LosAngeles.png", "assets/images/SouthUtah.png", "assets/images/SaltLakeCity.png");
+$.preloadImages("assets/images/LosAngeles.png",
+                "assets/images/SouthUtah.png",
+                "assets/images/SaltLakeCity.png",
+                "assets/images/CaliCar-pause.png",
+                "assets/images/CaliCar.png",
+                "assets/images/CaliCar-play.png",
+                "assets/images/SoUtCar.png",
+                "assets/images/utah-road.png",
+                );
 
 $(document).ready(function(){
   var widget  = SC.Widget($('#cloudplayer').attr('id'));
