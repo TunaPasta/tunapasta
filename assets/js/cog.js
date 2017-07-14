@@ -10,6 +10,8 @@ $(document).ready(function(){
           heightSoCal = $('#SoCal').height();
        } else if ($('#SoUtah').height() > 30 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
+       } else if ($('#SLC').height() > 30 && heightSLC == 0) {
+          heightSLC = $('#SLC').height();
        } else {
          if(heightSoCal == 20 || heightSoUtah == 20){
            heightSoCal = 0;
@@ -21,6 +23,7 @@ $(document).ready(function(){
            firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
            secondChange = firstChange + heightSoCal;
            thirdChange = secondChange + heightSoUtah;
+           fourthChange = thirdChange + heightSLC;
            clearInterval(checkExist);
            allLoaded = true;
          }
@@ -36,6 +39,7 @@ $(document).ready(function(){
    var subtract = 50;
    var heightSoCal = $('#SoCal').height();
    var heightSoUtah = $('#SoUtah').height();
+   var heightSLC = $('#SLC').height();
    var heightHero = $('.hero').height()
 
    var carPercentage = heightSoCal*0.4114;
@@ -47,6 +51,7 @@ $(document).ready(function(){
    var firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
    var secondChange = firstChange + heightSoCal;
    var thirdChange = secondChange + heightSoUtah;
+   var fourthChange = thirdChange + heightSLC;
   //  var changeHeight = $('.hero').height();
    var changeHeight = heightHero*0.75;
 
@@ -103,6 +108,16 @@ $(document).ready(function(){
         // });
       }
       if (div.scrollTop() > thirdChange) {
+        page = 3;
+        setPlayID(page);
+        // $('.icon').hide();
+        // $('.play').show();
+        car.src = "assets/images/SLCCar.png";
+        // $(".play").css({
+        //   "background-color": "blue",
+        // });
+      }
+      if (div.scrollTop() > fourthChange) {
         page = -1;
         setPlayID(page);
         $('.icon').hide();
