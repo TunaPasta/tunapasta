@@ -13,9 +13,16 @@ $(document).ready(function(){
        } else if ($('#SLC').height() > 30 && heightSLC == 0) {
           heightSLC = $('#SLC').height();
        } else {
-         if(heightSoCal == 20 || heightSoUtah == 20){
-           heightSoCal = 0;
-           heightSoUtah = 0;
+         if(heightSoCal == 20 || heightSoUtah == 20 || heightSoCal == 20){
+           if(heightSoCal == 20){
+             heightSoCal = 0
+           }
+           if(heightSoUtah == 20){
+             heightSoUtah = 0
+           }
+           if(heightSLC == 20){
+             heightSLC = 0
+           }
          } else {
            console.log("Height socal: " + heightSoCal);
            console.log("Height soutah: " + heightSoUtah);
