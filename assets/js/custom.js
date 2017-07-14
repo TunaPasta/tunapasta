@@ -27,7 +27,8 @@ $(document).ready(function(){
   };
   var episodesAPI = {
     '1': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330851792&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
-    '2': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/332070612&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false'
+    '2': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/332070612&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '3': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333145049&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false'
   }
   var load = false;
   var loadedTrack = 0;
