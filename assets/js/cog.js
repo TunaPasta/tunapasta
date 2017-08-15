@@ -31,7 +31,7 @@ $(document).ready(function(){
 
        if ($('#SoCal').height() > 30 && heightSoCal == 500) {
           heightSoCal = $('#SoCal').height();
-       } else if ($('#SoUtah').height() > 30 && heightSoUtah == 0) {
+       } else if ($('#SoUtah').height() > 30 && heightSoUtah == 500) {
           heightSoUtah = $('#SoUtah').height();
           roadHeight = heightSoUtah
        } else if ($('#SLC').height() > 30 && heightSLC == 0) {
