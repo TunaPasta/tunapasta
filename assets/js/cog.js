@@ -99,7 +99,7 @@ $(document).ready(function(){
         setPlayID(page);
         $('.play').show();
         $('.icon').show();
-        car.src = "assets/images/CaliCar.png";
+        car.src = "assets/images/PlayCar.png";
         $('#navbar').css({
           "background-color": "#5ADCFF",
         });
@@ -107,22 +107,10 @@ $(document).ready(function(){
       if (div.scrollTop() > secondChange) {
         page = 2;
         setPlayID(page);
-        // $('.icon').hide();
-        // $('.play').show();
-        car.src = "assets/images/SoUtCar.png";
-        // $(".play").css({
-        //   "background-color": "blue",
-        // });
       }
       if (div.scrollTop() > thirdChange) {
         page = 3;
         setPlayID(page);
-        // $('.icon').hide();
-        // $('.play').show();
-        car.src = "assets/images/SLCCar.png";
-        // $(".play").css({
-        //   "background-color": "blue",
-        // });
       }
       if (div.scrollTop() > fourthChange) {
         page = -1;
