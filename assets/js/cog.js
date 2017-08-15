@@ -11,7 +11,7 @@ $(document).ready(function(){
    $('.play').hide();
    var subtract = 50;
    var heightSoCal = 500
-   var heightSoUtah = $('#SoUtah').height();
+   var heightSoUtah = 500
    var heightSLC = $('#SLC').height();
    var heightHero = $('.hero').height()
 
@@ -61,10 +61,9 @@ $(document).ready(function(){
 
 
    div.scroll(function() {
-     console.log(allLoaded)
 
-    //  console.log("Scroll" + div.scrollTop());
     if(allLoaded){
+
      if (div.scrollTop() < heightHero) {
        $("#cog").css({
         "margin-left": ""+div.scrollTop()-heightHero +"px",
@@ -90,10 +89,18 @@ $(document).ready(function(){
        });
      }
 
+
+
      let page = parseInt(div.scrollTop()/roadHeight - 0.2) + 1
      if (div.scrollTop() < firstChange){
        page = 0;
      }
+
+     console.log("Scroll: " + div.scrollTop());
+     console.log("Page: " + page)
+     console.log("roadHeight: " + roadHeight)
+     console.log("firstChange: " + firstChange)
+
      setPlayID(page)
 
       if (div.scrollTop() > secondChange - carPercentage + (heightHero - subtract)) {
