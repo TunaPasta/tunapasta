@@ -11,7 +11,7 @@ $(document).ready(function(){
    $('.play').hide();
    var subtract = 50;
    var heightSoCal = 500
-   var heightSoUtah = 500
+   var heightSoUtah = 700
    var heightSLC = $('#SLC').height();
    var heightHero = $('.hero').height()
 
