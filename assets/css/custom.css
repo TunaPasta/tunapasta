@@ -560,17 +560,12 @@ a:visited, a:active {
     margin-top: -40px;
   }
 
-  #SoUt .sign {
-    margin-top: -181% !important;
-  }
-
-
   .sign {
-    margin-top: -124%;
+    margin-top: -146% !important;
   }
 
-  #SoUtah .sign {
-    margin-top: -151% !important;
+  #SoCal .sign {
+    margin-top: -124% !important;
   }
 
   #cog {
