@@ -56,9 +56,8 @@ $(document).ready(function(){
      $('.play').css({"width": $('.location').width()*0.25});
    }
    var firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
+   var roadHeight = heightSoUtah
    var secondChange = firstChange + heightSoCal;
-   var thirdChange = secondChange + heightSoUtah;
-   var fourthChange = thirdChange + heightSLC;
   //  var changeHeight = $('.hero').height();
    var changeHeight = heightHero*0.75;
 
@@ -89,39 +88,13 @@ $(document).ready(function(){
          "background-color": "#7DDFFF",
        });
      }
-    //  console.log("Leftside");
-      //Determine the amount to rotate by.
-      // console.log(1+heightHero/980);
 
-      // console.log("Page is " + page);
-      if (div.scrollTop() > firstChange){
-        page = 1;
-        setPlayID(page);
-        $('.play').show();
-        $('.icon').show();
-        car.src = "assets/images/PlayCar.png";
-        $('#navbar').css({
-          "background-color": "#5ADCFF",
-        });
-      }
-      if (div.scrollTop() > secondChange) {
-        page = 2;
-        setPlayID(page);
-      }
-      if (div.scrollTop() > thirdChange) {
-        page = 3;
-        setPlayID(page);
-      }
-      if (div.scrollTop() > fourthChange) {
-        page = -1;
-        setPlayID(page);
-        $('.icon').hide();
-        $('.play').show();
-        car.src = "assets/images/ShareCar.png";
-        // $(".play").css({
-        //   "background-color": "blue",
-        // });
-      }
+     let page = parseInt(div.scrollTop()/roadHeight - 0.2) + 1
+     if (div.scrollTop() < firstChange){
+       page = 0;
+     }
+     setPlayID(page)
+
       if (div.scrollTop() > secondChange - carPercentage + (heightHero - subtract)) {
         $("#cog").css({
          "margin-left": ""-div.scrollTop()+(secondChange - carPercentage + (heightHero - subtract)) +"px",
@@ -132,13 +105,6 @@ $(document).ready(function(){
       }
       if(div.scrollTop() >= heightHero){
         deg = -(div.scrollTop()-heightHero) * (360/( heightSoCal+heightSoCal ));
-        // deg = -(div.scrollTop()-(heightHero))(360/(heightSoCal));
-        // if (window.scrollY < heightHero) {
-        //   leftcog.src = "assets/images/leftcog.png";
-        // }
-        // if (window.scrollY > heightHero) {
-        //   leftcog.src = "assets/images/SLCcogleft.png";
-        // }
       }
       $("#cog").css({
         "transform": "rotate("+deg+"deg)",
@@ -158,12 +124,35 @@ function togglePlayShare(){
 }
 
 function setPlayID(id){
+  let episodeCount = 8
+  if(id >= 1)
+    firstPageChange()
+  if(id == episodeCount){
+    console.log("LAST PAGE")
+    lastPageChange()
+    id = -1
+  }
   $('.play').attr('id', id);
   if(playingTrack == id){
     caricon.src = "assets/images/pause.png"
   } else {
     caricon.src = "assets/images/play.png"
   }
+}
+
+function firstPageChange(){
+  $('.play').show();
+  $('.icon').show();
+  car.src = "assets/images/PlayCar.png";
+  $('#navbar').css({
+    "background-color": "#5ADCFF",
+  });
+}
+
+function lastPageChange(){
+  $('.icon').hide();
+  $('.play').show();
+  car.src = "assets/images/ShareCar.png";
 }
 
 // $(document).ready(function(){

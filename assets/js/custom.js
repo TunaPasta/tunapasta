@@ -19,16 +19,14 @@ $.preloadImages("assets/images/LosAngeles.png",
 $(document).ready(function(){
   var widget  = SC.Widget($('#cloudplayer').attr('id'));
   var defaultPlayerOptions = {show_artwork: false, show_comments: false, auto_play: true, visual: false};
-  var episodes = {
-    'mixtape': 'https://soundcloud.com/user-162103925/views-from-the-swamp',
-    'promo': 'https://soundcloud.com/tunapastapodcast/coming-soon',
-    'ep1': 'https://soundcloud.com/tunapastapodcast/episode-1-southern-california',
-    'ep2': 'https://soundcloud.com/tunapastapodcast/episode-2-southern-utah'
-  };
   var episodesAPI = {
     '1': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330851792&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
     '2': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/332070612&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
-    '3': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333145049&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false'
+    '3': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333145049&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '4': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/334143770&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '5': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/335199742&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '6': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/336211600&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '7': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337409771&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false'
   }
   var load = false;
   var loadedTrack = 0;
