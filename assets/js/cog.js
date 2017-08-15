@@ -3,8 +3,6 @@ $(document).ready(function(){
     var allLoaded = false
 
     var checkExist = setInterval(function() {
-      console.log("SoCal" + $('#SoCal').height());
-      console.log("SoUtah" + $('#SoUtah').height());
 
        if ($('#SoCal').height() > 30 && heightSoCal == 0) {
           heightSoCal = $('#SoCal').height();
@@ -24,8 +22,6 @@ $(document).ready(function(){
              heightSLC = 0
            }
          } else {
-           console.log("Height socal: " + heightSoCal);
-           console.log("Height soutah: " + heightSoUtah);
            carPercentage = heightSoCal*0.4114;
            firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
            secondChange = firstChange + heightSoCal;
@@ -128,7 +124,6 @@ function setPlayID(id){
   if(id >= 1)
     firstPageChange()
   if(id == episodeCount){
-    console.log("LAST PAGE")
     lastPageChange()
     id = -1
   }
