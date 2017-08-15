@@ -27,10 +27,9 @@ $(document).ready(function(){
   //  var changeHeight = $('.hero').height();
    var changeHeight = heightHero*0.75;
 
-
     var checkExist = setInterval(function() {
 
-       if ($('#SoCal').height() > 30 && heightSoCal == 0) {
+       if ($('#SoCal').height() > 30 && heightSoCal == 500) {
           heightSoCal = $('#SoCal').height();
        } else if ($('#SoUtah').height() > 30 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
@@ -58,6 +57,9 @@ $(document).ready(function(){
          }
        }
     }, 100);
+
+  console.log(heightSoCal)
+
 
    div.scroll(function() {
     //  console.log("Scroll" + div.scrollTop());
