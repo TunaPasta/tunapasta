@@ -33,6 +33,7 @@ $(document).ready(function(){
           heightSoCal = $('#SoCal').height();
        } else if ($('#SoUtah').height() > 30 && heightSoUtah == 0) {
           heightSoUtah = $('#SoUtah').height();
+          roadHeight = heightSoUtah
        } else if ($('#SLC').height() > 30 && heightSLC == 0) {
           heightSLC = $('#SLC').height();
        } else {
