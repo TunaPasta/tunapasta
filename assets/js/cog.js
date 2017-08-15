@@ -2,6 +2,32 @@ $(document).ready(function(){
 
     var allLoaded = false
 
+
+   var div = $('#main');
+   var scroller = $('.hero');
+   var top = true;
+   var deg = 0;
+   var page = 1;
+   $('.play').hide();
+   var subtract = 50;
+   var heightSoCal = 500
+   var heightSoUtah = $('#SoUtah').height();
+   var heightSLC = $('#SLC').height();
+   var heightHero = $('.hero').height()
+
+   var carPercentage = heightSoCal*0.4114;
+
+   if($('body').width() < 770 ){
+     subtract = subtract + 110;
+     $('.play').css({"width": $('.location').width()*0.25});
+   }
+   var firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
+   var roadHeight = heightSoUtah
+   var secondChange = firstChange + heightSoCal;
+  //  var changeHeight = $('.hero').height();
+   var changeHeight = heightHero*0.75;
+
+
     var checkExist = setInterval(function() {
 
        if ($('#SoCal').height() > 30 && heightSoCal == 0) {
@@ -32,30 +58,6 @@ $(document).ready(function(){
          }
        }
     }, 100);
-
-   var div = $('#main');
-   var scroller = $('.hero');
-   var top = true;
-   var deg = 0;
-   var page = 1;
-   $('.play').hide();
-   var subtract = 50;
-   var heightSoCal = $('#SoCal').height();
-   var heightSoUtah = $('#SoUtah').height();
-   var heightSLC = $('#SLC').height();
-   var heightHero = $('.hero').height()
-
-   var carPercentage = heightSoCal*0.4114;
-
-   if($('body').width() < 770 ){
-     subtract = subtract + 110;
-     $('.play').css({"width": $('.location').width()*0.25});
-   }
-   var firstChange = $('.hero').height() + carPercentage - (heightHero - subtract);
-   var roadHeight = heightSoUtah
-   var secondChange = firstChange + heightSoCal;
-  //  var changeHeight = $('.hero').height();
-   var changeHeight = heightHero*0.75;
 
    div.scroll(function() {
     //  console.log("Scroll" + div.scrollTop());
