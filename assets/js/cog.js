@@ -58,10 +58,11 @@ $(document).ready(function(){
        }
     }, 100);
 
-  console.log(heightSoCal)
 
 
    div.scroll(function() {
+     console.log(allLoaded)
+
     //  console.log("Scroll" + div.scrollTop());
     if(allLoaded){
      if (div.scrollTop() < heightHero) {
