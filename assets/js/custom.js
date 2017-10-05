@@ -26,11 +26,14 @@ $(document).ready(function(){
     '4': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/334143770&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
     '5': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/335199742&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
     '6': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/336211600&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
-    '7': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337409771&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false'
+    '7': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337409771&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '8': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/340401333&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '9': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341418404&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '10': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342435561&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false',
+    '11': 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/343485547&amp;auto_play=true&amp;show_artwork=false&amp;color=7dddff&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false'
   }
   var load = false;
   var loadedTrack = 0;
-
   $('.play').click(() => {
     var selectedTrack = $(".play").attr('id');
     if(selectedTrack == -1){

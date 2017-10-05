@@ -103,6 +103,16 @@ $(document).ready(function(){
      console.log("firstChange: " + firstChange)
 
      setPlayID(page)
+     if(page == 10){
+       let pageTenValue = (div.scrollTop() - (9.2*roadHeight))
+       let sinCurve = Math.sin(Math.PI / roadHeight * pageTenValue)
+       console.log("Page Ten:: " + sinCurve)
+       console.log("translateX(" + (parseFloat(1) + parseFloat(sinCurve)))
+
+       $(".play").css({
+        "transform": "translateX(" +  - (50 + sinCurve * 45) + "%) scale(" + (parseFloat(1) + parseFloat(sinCurve) / 6) + ")",
+       });
+     }
 
       if (div.scrollTop() > secondChange - carPercentage + (heightHero - subtract)) {
         $("#cog").css({
@@ -133,7 +143,7 @@ function togglePlayShare(){
 }
 
 function setPlayID(id){
-  let episodeCount = 8
+  let episodeCount = 12
   if(id >= 1)
     firstPageChange()
   if(id == episodeCount){
