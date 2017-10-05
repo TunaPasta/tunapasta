@@ -97,18 +97,15 @@ $(document).ready(function(){
        page = 0;
      }
 
-     console.log("Scroll: " + div.scrollTop());
-     console.log("Page: " + page)
-     console.log("roadHeight: " + roadHeight)
-     console.log("firstChange: " + firstChange)
+    //  console.log("Scroll: " + div.scrollTop());
+    //  console.log("Page: " + page)
+    //  console.log("roadHeight: " + roadHeight)
+    //  console.log("firstChange: " + firstChange)
 
      setPlayID(page)
      if(page == 10){
        let pageTenValue = (div.scrollTop() - (9.2*roadHeight))
        let sinCurve = Math.sin(Math.PI / roadHeight * pageTenValue)
-       console.log("Page Ten:: " + sinCurve)
-       console.log("translateX(" + (parseFloat(1) + parseFloat(sinCurve)))
-
        $(".play").css({
         "transform": "translateX(" +  - (50 + sinCurve * 45) + "%) scale(" + (parseFloat(1) + parseFloat(sinCurve) / 6) + ")",
        });
